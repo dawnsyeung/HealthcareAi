@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final Capstone Assignment 6.1 - EquiClaim</title>
+    <style>
+        :root {
+            --primary: #0f4c81;
+            --accent: #d97706;
+            --muted: #4b5563;
+            --surface: #ffffff;
+            --background: #f5f7fa;
+            --border: #d1d9e6;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--background);
+            color: #1a2533;
+            font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        main {
+            counter-reset: slide;
+            padding: 0.75in 0.5in;
+        }
+
+        .slide {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: 0 12px 35px rgba(15, 51, 92, 0.12);
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            justify-content: flex-start;
+            margin: 0 auto 0.6in;
+            max-width: 11in;
+            min-height: 7.3in;
+            padding: 1.1in 1.15in 1in;
+            page-break-after: always;
+            position: relative;
+        }
+
+        .slide:last-child { page-break-after: auto; }
+
+        .slide::before {
+            border-bottom: 2px solid var(--accent);
+            color: var(--muted);
+            content: counter(slide, decimal-leading-zero);
+            counter-increment: slide;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            position: absolute;
+            right: 1.1in;
+            text-transform: uppercase;
+            top: 0.7in;
+        }
+
+        .slide h1 {
+            color: var(--primary);
+            font-size: 34px;
+            letter-spacing: -0.02em;
+            margin: 0;
+        }
+
+        .title {
+            font-size: 48px;
+            color: var(--primary);
+            margin-bottom: 0.2in;
+        }
+
+        .subtitle {
+            font-size: 22px;
+            color: var(--muted);
+            margin: 0;
+        }
+
+        .bullet {
+            max-width: 8.25in;
+            margin: 0.15in auto 0;
+            text-align: left;
+            font-size: 17px;
+        }
+
+        ul.bullet {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul.bullet li {
+            border-left: 3px solid rgba(15, 76, 129, 0.25);
+            margin-bottom: 0.4in;
+            padding-left: 0.3in;
+        }
+
+        ul.bullet li strong {
+            color: var(--primary);
+            display: inline-block;
+            margin-bottom: 0.05in;
+        }
+
+        .two-column ul.bullet {
+            columns: 2;
+            column-gap: 0.8in;
+        }
+
+        .insight-graphic {
+            margin: 0.35in auto 0;
+            max-width: 8.5in;
+            text-align: center;
+        }
+
+        .insight-graphic img {
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(18, 46, 85, 0.2);
+            height: auto;
+            max-height: 3.6in;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .insight-graphic figcaption {
+            color: var(--muted);
+            font-size: 14px;
+            margin-top: 0.15in;
+        }
+
+        .meta {
+            color: var(--muted);
+            font-size: 18px;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0.35in;
+        }
+
+        @media print {
+            body { background: #ffffff; }
+            main { padding: 0; }
+            .slide {
+                box-shadow: none;
+                border-radius: 6px;
+                border-color: rgba(17, 24, 39, 0.15);
+                min-height: 6.5in;
+                padding: 0.8in;
+                page-break-inside: avoid;
+            }
+            .slide::before { top: 0.5in; right: 0.8in; }
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <div class="slide">
+        <h1 class="title">EquiClaim</h1>
+        <p class="meta">Dawn [Last Name]<br>November 27, 2025</p>
+        <p class="subtitle">An AI-Powered Transparency Tool for Healthcare Claims Denials</p>
+        <figure class="insight-graphic">
+            <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80" alt="Healthcare and technology leaders collaborating around a conference table" loading="lazy">
+            <figcaption>Independent practice teams aligning on denial mitigation priorities.</figcaption>
+        </figure>
+    </div>
+    <div class="slide">
+        <h1 class="title">INTRODUCTION</h1>
+        <p class="bullet">With a relentless commitment to equity and efficiency in healthcare, EquiClaim is a bridge...a bridge that empowers independent providers with AI-driven insights into payer denial patterns. Through real-time data aggregation and predictive analytics, EquiClaim equips small to mid-sized practices with actionable transparency, leveling the information asymmetry that has long favored payers over providers and patients.</p>
+        <p class="subtitle">At EquiClaim, we see reimbursement fairness not as a goal, but as an ongoing journey toward a more just healthcare system.</p>
+    </div>
+    <div class="slide">
+        <h1 class="title">PROBLEM STATEMENT</h1>
+        <ul class="bullet">
+            <li><strong>An Escalating Crisis in Claims Denials</strong><br>• 41% of healthcare providers report denial rates of 10% or higher, leading to significant rework and lost revenue (Experian Health, 2025).<br>• Initial claim denials reached 11.8% in 2024, a 16% rise since 2018, with up to 15% of all medical claims denied or delayed (MGMA, 2024; Kodiak Solutions, 2025).<br>• Demographically disproportionate impacts: Denials often stem from coding errors (40% of preventive care denials) and affect smaller practices hardest, exacerbating financial strain.</li>
+            <li><strong>Provider-Payer Asymmetry</strong><br>• Payers leverage vast data to deny claims for profit, while providers rely on fragmented, individual experiences.<br>• 70% of denied claims are eventually paid after appeals, but the process wastes resources and delays care (AHA, 2025).</li>
+            <li><strong>What Does "Fair" Reimbursement Look Like?</strong><br>• No standardized visibility into denial trends by payer, geography, or diagnosis.<br>• Lack of real-time insights hinders proactive decision-making, harming patient access to care.</li>
+        </ul>
+    </div>
+    <div class="slide two-column">
+        <h1 class="title">COMPETITOR’S LANDSCAPE</h1>
+        <ul class="bullet">
+            <li><strong>CorroHealth</strong><br>○ Offers AI-driven denial recovery and appeals, focusing on identifying and recovering denied claims.<br>○ Targets similar provider markets with data analytics for revenue leakage.<br>○ Competes in analytics and features (e.g., denial prediction, contract management).<br>○ May be recognized as a competitor by providers and revenue cycle managers.</li>
+            <li><strong>Athenahealth</strong><br>○ AI-native revenue cycle management (RCM) platform with denial management tools.<br>○ Includes clinical-decision modeling and automated workflows for claims submission.<br>○ Data feeds into predictive denial prevention for quality/compliance.<br>○ May be identified as a competitor by small to mid-sized practices.</li>
+            <li><strong>Waystar</strong><br>○ Comprehensive RCM with AI for eligibility verification, prior authorizations, and denial appeals.<br>○ Focuses on reducing denials through automation but lacks deep transparency into systemic biases.<br>○ Competes in terms of scalability and integration with EHR systems.</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h1 class="title">OUR VISION</h1>
+        <ul class="bullet">
+            <li><strong>Transparency in a Tap</strong><br>With AI-assistance, providers gain instant access to aggregated denial patterns, empowering them to anticipate payer behaviors and document claims with precision—transforming piecemeal guesswork into data-driven strategy.</li>
+            <li><strong>Predict and Prevent in Real Time</strong><br>Too often, denials are discovered after submission, wasting time and resources. EquiClaim "flags" high-risk claims proactively, suggesting adjustments to documentation or procedures before submission, ensuring faster approvals.</li>
+            <li><strong>Insights Worth a Thousand Denials</strong><br>Leveraging visual dashboards, EquiClaim maps denial trends by payer, geography, and code, providing a clear, color-coded path to reimbursement success. Providers see biases and patterns at a glance, enabling informed advocacy.</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h1 class="title">VALUE PROPOSITION AND TARGET MARKET</h1>
+        <p class="bullet">Over 1.5 million independent small to mid-sized professional practices in the US, serving millions of patients annually.<br>200+ billion dollars in annual healthcare claims processed, with denials costing providers up to $265 billion yearly (AHA, 2025 estimates).<br>Denials delay care: Patients face 18-24 month waits for appeals in complex cases, with average denial recovery taking 45-60 days—critical for timely treatment.<br>Providers, patients, and even payers benefit from increased transparency, reduced appeals, and fairer reimbursements via AI-assisted pattern recognition and bias illumination.<br>EquiClaim addresses the unmet need for data symmetry, solving information asymmetry by democratizing payer insights and shifting leverage back to providers.</p>
+        <figure class="insight-graphic">
+            <img src="https://images.unsplash.com/photo-1580281657521-6a6620c3a76b?auto=format&fit=crop&w=1600&q=80" alt="Physician reviewing a patient's chart with a caregiver" loading="lazy">
+            <figcaption>Equitable reimbursement empowers clinicians to refocus on patient care.</figcaption>
+        </figure>
+    </div>
+    <div class="slide">
+        <h1 class="title">MODEL STRUCTURE</h1>
+        <ul class="bullet">
+            <li><strong>Natural Language Processing</strong><br>In analyzing payer clinical policy bulletins and denial reason codes, we impose structure on unstructured data (e.g., medical records, remittances) to generate labels for compliance and reimbursement criteria.</li>
+            <li><strong>Prediction Modeling/Visualization</strong><br>Using supervised learning on labeled historical data (approvals/denials) and unsupervised learning to cluster unknown denial patterns, we predict claim outcomes based on attributes like geography, specialty, plan type (self-funded vs. fully insured), CPT/ICD-10 codes.</li>
+            <li><strong>Recommendation System</strong><br>Based on NLP and prediction models, EquiClaim provides advisory recommendations—e.g., "Add documentation for medical necessity per payer policy"—visualized in dashboards with color bands indicating denial risk (green: low, red: high).</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h1 class="title">DATA STRATEGY</h1>
+        <ul class="bullet">
+            <li><strong>NLP to Structure Policies and Records</strong><br>A scrub of payer policies, 835 remittances, CPT/ICD-10 codes, and anonymized patient records to identify trends in denials and compliance.</li>
+            <li><strong>Critical Attributes for Contextual Insights</strong><br>Provider details (geography, specialty)<br>Plan attributes (self-funded, fully insured, state affiliation)<br>Social determinants (e.g., patient demographics to detect biases)</li>
+            <li><strong>Consortium of Aggregated Data</strong><br>Data-Related Issues<br>Quantity of data: Abundance of historical claims; real-time feeds from consenting providers for ongoing updates.<br>Potential biases: Training multiple models to exclude attributes and measure impact; address overrepresentation in certain geographies or specialties.<br>Privacy/HIPAA: Patient data anonymized; consent required for aggregation—providers contribute only with explicit patient opt-in.<br>Label Challenges: AI labeling of policies based on standardized parameters; challenges in structuring ambiguous medical notes.<br>Overfitting: Cross-validation across payers to ensure generalization.<br>Generalization: Focus on commercial payers; potential expansion to Medicare/Medicaid.</li>
+        </ul>
+        <figure class="insight-graphic">
+            <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1600&q=80" alt="Data visualization dashboards displayed on multiple monitors" loading="lazy">
+            <figcaption>Unified denial intelligence dashboards inform proactive provider decisions.</figcaption>
+        </figure>
+    </div>
+    <div class="slide">
+        <h1 class="title">IMPLEMENTATION STRATEGY</h1>
+        <ul class="bullet">
+            <li><strong>Focus Group</strong><br>Comprised of out-of-network providers, patients, revenue experts, and payer representatives, a focus group provides feedback on usability and ethical integration.</li>
+            <li><strong>Pilot Group</strong><br>Start with a small cohort of 20-30 independent providers (low-risk, out-of-network) to test EquiClaim on anonymized data for 6-12 months, gathering user experience feedback aligned with billing cycles.</li>
+            <li><strong>Seamless Integration, Not Disruption</strong><br>EquiClaim is a "bolt-on" tool that integrates with existing EHR and billing systems (e.g., via APIs), minimizing workflow changes. Providers upload claims data securely, receive insights without altering core processes—focusing on empowerment over overhaul.</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h1 class="title">KEY STAKEHOLDERS</h1>
+        <p class="bullet"><strong>EquiClaim</strong><br>Providers: More informed decisions reduce denial rates, saving time and revenue while enabling better patient advocacy.<br>Patients: Transparency illuminates systemic biases, empowering them to contribute data and advocate for fair care—improving access and outcomes.<br>Leadership (Practice Owners): Aggregated insights shift negotiating leverage, reducing financial losses and enhancing practice sustainability.<br>Payers: While potentially resistant, the tool promotes efficiency by highlighting fixable issues, fostering a more collaborative ecosystem without direct confrontation.</p>
+    </div>
+    <div class="slide">
+        <h1 class="title">REGULATORY IMPLICATIONS</h1>
+        <ul class="bullet">
+            <li><strong>Monitoring for Perpetuated Biases</strong><br>EquiClaim includes automated audits to detect and mitigate biases in denial predictions, ensuring fair representation across demographics and geographies.</li>
+            <li><strong>AI Ethics and Navigating Liability</strong><br>Focus on patient consent for data use; tool provides insights without guaranteeing outcomes, reducing liability. Addresses HIPAA through anonymization and secure data handling.</li>
+            <li><strong>Sector-Specific vs. Governmental Oversight</strong><br>Navigates US regulations like HIPAA and state-specific consent laws; if scaled internationally, adapts to varying privacy standards (e.g., GDPR equivalents) to enable global dissemination.</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h1 class="title">CLOSING REMARKS</h1>
+        <p class="subtitle">Ask yourself...</p>
+        <p class="bullet">If you held the key to unlocking fairness in a system rigged against the vulnerable...a tool that could empower millions to reclaim what's rightfully theirs...would you wield it boldly, or let inequality persist?</p>
+        <p class="subtitle">Let EquiClaim be the catalyst you've envisioned...restoring balance to healthcare, one transparent claim at a time.</p>
+    </div>
+    <div class="slide">
+        <h1 class="title">REFERENCES</h1>
+        <ul class="bullet">
+            <li>Experian Health. (2025). State of Claims Report 2025.</li>
+            <li>Kodiak Solutions. (2025). Denial Rates Are Climbing.</li>
+            <li>AHA. (2025). Cost of Caring Report.</li>
+            <li>MGMA. (2024). Report on Claim Denials.</li>
+            <li>Commonwealth Fund. (2025). Insurance Claim Denials Erode Trust.</li>
+            <li>Finance Yahoo. (2025). 19 AI-Powered RCM Solutions.</li>
+            <li>MD Clarity. (2025). Top 5 CorroHealth Alternatives.</li>
+            <li>Athenahealth. (2025). AI vs. AI in RCM.</li>
+            <li>Other sources available upon request.</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h1 class="title">THANK YOU</h1>
+        <p class="subtitle">for your time and attention</p>
+        <p>Dawn [Last Name]<br>Healthcare Innovator<br>dawn@example.com</p>
+        <p>*References available upon request</p>
+    </div>
+    </main>
+</body>
+</html>
