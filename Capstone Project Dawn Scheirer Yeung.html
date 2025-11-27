@@ -155,25 +155,29 @@
         }
 
         @page {
-            size: A4 landscape;
-            margin: 0.35in;
+            size: landscape;
+            margin: 0.2in;
         }
 
         @media print {
-            body { background: #ffffff; }
+            body {
+                background: #ffffff;
+                margin: 0;
+            }
             main { padding: 0; }
             .slide {
                 box-shadow: none;
                 border-radius: 6px;
                 border-color: rgba(17, 24, 39, 0.15);
-                min-height: 6.5in;
-                padding: 0.8in;
+                margin: 0 auto;
+                min-height: 6.2in;
+                padding: 0.6in 0.65in 0.6in;
             }
             .slide + .slide {
                 page-break-before: always;
                 break-before: page;
             }
-            .slide::before { top: 0.5in; right: 0.8in; }
+            .slide::before { top: 0.45in; right: 0.65in; }
         }
     </style>
 </head>
