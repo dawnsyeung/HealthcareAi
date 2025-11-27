@@ -185,11 +185,21 @@
             margin: 0 0 0.04in;
         }
 
+        .slide.data-strategy ul.bullet,
+        .slide.value-proposition ul.bullet {
+            row-gap: 0;
+        }
+
         .slide.data-strategy ul.bullet li strong,
         .slide.value-proposition ul.bullet li strong {
             display: block;
-            margin-top: 0.0em;
-            margin-bottom: 0.0em;
+            margin-top: 0.2in;
+            margin-bottom: 0;
+        }
+
+        .slide.data-strategy ul.bullet li:first-child strong,
+        .slide.value-proposition ul.bullet li:first-child strong {
+            margin-top: 0;
         }
 
         .slide::before {
