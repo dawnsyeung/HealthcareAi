@@ -104,6 +104,20 @@
             margin-bottom: 0.05in;
         }
 
+        ul.bullet li ul {
+            list-style: disc;
+            margin: 0.1in 0 0;
+            padding-left: 0.25in;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        ul.bullet li ul li {
+            border: none;
+            margin: 0 0 0.08in;
+            padding: 0;
+        }
+
         .two-column ul.bullet {
             columns: 2;
             column-gap: 0.8in;
@@ -197,10 +211,16 @@
     </div>
     <div class="slide">
         <h1 class="title">VALUE PROPOSITION AND TARGET MARKET</h1>
-        <p class="bullet">Over 1.5 million independent small to mid-sized professional practices in the US, serving millions of patients annually.<br>200+ billion dollars in annual healthcare claims processed, with denials costing providers up to $265 billion yearly (AHA, 2025 estimates).<br>Denials delay care: Patients face 18-24 month waits for appeals in complex cases, with average denial recovery taking 45-60 days—critical for timely treatment.<br>Providers, patients, and even payers benefit from increased transparency, reduced appeals, and fairer reimbursements via AI-assisted pattern recognition and bias illumination.<br>EquiClaim addresses the unmet need for data symmetry, solving information asymmetry by democratizing payer insights and shifting leverage back to providers.</p>
+        <ul class="bullet">
+            <li><strong>Independent Practice TAM</strong><br>1.5M+ small to mid-sized professional practices in the US lack pooled denial intelligence yet generate the majority of out-of-network claims volume.</li>
+            <li><strong>Revenue at Risk</strong><br>Over $200B in claims cycle annually while preventable denials siphon up to $265B (AHA, 2025), undermining margins for mission-driven community practices.</li>
+            <li><strong>Patient Experience Lag</strong><br>Appeals stretch 18–24 months in complex cases and average recovery still takes 45–60 days, delaying critical treatment decisions for millions.</li>
+            <li><strong>Multi-Sided Efficiency Gains</strong><br>Providers reclaim staff hours, patients receive faster answers, and even payers lower admin friction when transparency exposes fixable process defects.</li>
+            <li><strong>Differentiated AI Transparency</strong><br>EquiClaim democratizes payer playbooks with bias illumination and predictive coaching, giving independents the leverage historically held only by national systems.</li>
+        </ul>
         <figure class="insight-graphic">
-            <img src="https://images.unsplash.com/photo-1580281657521-6a6620c3a76b?auto=format&fit=crop&w=1600&q=80" alt="Physician reviewing a patient's chart with a caregiver" loading="lazy">
-            <figcaption>Equitable reimbursement empowers clinicians to refocus on patient care.</figcaption>
+            <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1600&q=80" alt="Healthcare revenue leaders reviewing analytics together" loading="lazy">
+            <figcaption>Transparent denial analytics align providers, patients, and payers around fair outcomes.</figcaption>
         </figure>
     </div>
     <div class="slide">
@@ -233,14 +253,35 @@
     </div>
     <div class="slide">
         <h1 class="title">KEY STAKEHOLDERS</h1>
-        <p class="bullet"><strong>EquiClaim</strong><br><strong>Providers</strong>: More informed decisions reduce denial rates, saving time and revenue while enabling better patient advocacy.<br><strong>Patients</strong>: Transparency illuminates systemic biases, empowering them to contribute data and advocate for fair care—improving access and outcomes.<br><strong>Leadership (Practice Owners)</strong>: Aggregated insights shift negotiating leverage, reducing financial losses and enhancing practice sustainability.<br><strong>Payers</strong>: While potentially resistant, the tool promotes efficiency by highlighting fixable issues, fostering a more collaborative ecosystem without direct confrontation.</p>
+        <ul class="bullet">
+            <li><strong>EquiClaim Product & Data Teams</strong><br>Own the AI roadmap, deploy fairness guardrails, and steward privacy controls so insights remain explainable and regulator-ready.</li>
+            <li><strong>Independent Providers & Care Teams</strong><br>Use transparent denial benchmarks to preempt documentation gaps, shrinking rework cycles and recapturing revenue for patient care.</li>
+            <li><strong>Patients & Caregivers</strong><br>Gain visibility into appeal status and systemic inequities, enabling shared decision-making and advocacy grounded in evidence.</li>
+            <li><strong>Practice Owners & Revenue Leaders</strong><br>Translate payer trendlines into negotiation leverage, unlocking sustainable cash flow and growth for multi-site groups.</li>
+            <li><strong>Commercial Payers & PBMs</strong><br>Surface preventable denial triggers, reducing administrative drag and supporting collaborative remediation with provider partners.</li>
+        </ul>
     </div>
     <div class="slide">
         <h1 class="title">REGULATORY IMPLICATIONS</h1>
         <ul class="bullet">
-            <li><strong>Monitoring for Perpetuated Biases</strong><br>EquiClaim includes automated audits to detect and mitigate biases in denial predictions, ensuring fair representation across demographics and geographies.</li>
-            <li><strong>AI Ethics and Navigating Liability</strong><br>Focus on patient consent for data use; tool provides insights without guaranteeing outcomes, reducing liability. Addresses HIPAA through anonymization and secure data handling.</li>
-            <li><strong>Sector-Specific vs. Governmental Oversight</strong><br>Navigates US regulations like HIPAA and state-specific consent laws; if scaled internationally, adapts to varying privacy standards (e.g., GDPR equivalents) to enable global dissemination.</li>
+            <li><strong>Monitoring for Perpetuated Biases</strong><br>Always-on fairness diagnostics flag disparate denial predictions before updates reach production, preserving equitable outcomes across demographics.
+                <ul>
+                    <li>Quarterly fairness reviews with provider advisors confirm variance stays within agreed parity thresholds (&lt;3%).</li>
+                    <li>Bias alerts auto-log root causes and remediation steps for auditors and payer partners.</li>
+                </ul>
+            </li>
+            <li><strong>AI Ethics and Navigating Liability</strong><br>Consent-first architecture keeps EquiClaim in the decision-support lane, pairing HIPAA-ready controls with clear accountability boundaries.
+                <ul>
+                    <li>Dynamic consent receipts record provenance for every contributing dataset, simplifying revocation workflows.</li>
+                    <li>Explainability packs accompany recommendations so compliance teams can trace inputs, thresholds, and suggested actions.</li>
+                </ul>
+            </li>
+            <li><strong>Sector-Specific vs. Governmental Oversight</strong><br>Policy intelligence maps federal, state, and international obligations so each deployment ships with the right privacy, security, and reporting hooks.
+                <ul>
+                    <li>Configurable policy toggles enforce state nuances (e.g., CCPA, NY DFS) prior to ingesting regional claims feeds.</li>
+                    <li>Expansion templates align to GDPR/PHIPA equivalents with pre-drafted Data Processing Agreements for partners.</li>
+                </ul>
+            </li>
         </ul>
     </div>
     <div class="slide">
