@@ -42,10 +42,15 @@
             min-height: 7.3in;
             padding: 1.1in 1.15in 1in;
             page-break-after: always;
+            break-after: page;
+            break-inside: avoid;
             position: relative;
         }
 
-        .slide:last-child { page-break-after: auto; }
+        .slide:last-child {
+            page-break-after: auto;
+            break-after: auto;
+        }
 
         .slide::before {
             border-bottom: 2px solid var(--accent);
@@ -163,7 +168,10 @@
                 border-color: rgba(17, 24, 39, 0.15);
                 min-height: 6.5in;
                 padding: 0.8in;
-                page-break-inside: avoid;
+            }
+            .slide + .slide {
+                page-break-before: always;
+                break-before: page;
             }
             .slide::before { top: 0.5in; right: 0.8in; }
         }
