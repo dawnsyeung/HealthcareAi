@@ -47,6 +47,32 @@
             position: relative;
         }
 
+        .slide.with-figure {
+            display: grid;
+            grid-template-columns: minmax(0, 0.58fr) minmax(0, 0.42fr);
+            column-gap: 0.55in;
+            row-gap: 0.35in;
+            align-items: start;
+        }
+
+        .slide.with-figure > :not(.insight-graphic) {
+            grid-column: 1;
+        }
+
+        .slide.with-figure .insight-graphic {
+            grid-column: 2;
+            grid-row: 1 / -1;
+            margin: 0;
+            max-width: none;
+            text-align: right;
+            align-self: start;
+        }
+
+        .slide.with-figure .insight-graphic img {
+            max-height: none;
+            width: 100%;
+        }
+
         .slide:last-child {
             page-break-after: auto;
             break-after: auto;
@@ -173,6 +199,9 @@
                 min-height: 6.2in;
                 padding: 0.6in 0.65in 0.6in;
             }
+            .slide.with-figure {
+                grid-template-columns: minmax(0, 0.6fr) minmax(0, 0.4fr);
+            }
             .slide + .slide {
                 page-break-before: always;
                 break-before: page;
@@ -183,7 +212,7 @@
 </head>
 <body>
     <main>
-    <div class="slide">
+    <div class="slide with-figure">
         <h1 class="title">EquiClaim</h1>
         <p class="meta">Dawn Scheirer Yeung<br>November 27, 2025<br>dawn@yeunginstitute.com</p>
         <p class="subtitle">An AI-Powered Transparency Tool for Fairness in Healthcare Claims Management</p>
@@ -230,7 +259,7 @@
             <li><strong>Insights Worth a Thousand Denials</strong><br>Visual dashboards contrast how different payers in different markets manage cost, so providers and patients can confront inequities with data and demand accessible care.</li>
         </ul>
     </div>
-    <div class="slide">
+    <div class="slide with-figure">
         <h1 class="title">VALUE PROPOSITION AND TARGET MARKET</h1>
         <ul class="bullet">
             <li><strong>Independent Practice TAM</strong><br>1.5M+ small to mid-sized professional practices in the US lack pooled denial intelligence yet generate the majority of out-of-network claims volume.</li>
@@ -253,7 +282,7 @@
             <li><strong>Recommendation System</strong><br>Based on NLP and prediction models, EquiClaim provides advisory recommendations—e.g., "Add documentation for medical necessity per payer policy"—visualized in dashboards with color bands indicating denial risk (green: low, red: high).</li>
         </ul>
     </div>
-    <div class="slide">
+    <div class="slide with-figure">
         <h1 class="title">DATA STRATEGY</h1>
         <ul class="bullet">
             <li><strong>NLP to Structure Policies and Records</strong><br>A scrub of payer policies, 835 remittances, CPT/ICD-10 codes, and anonymized patient records to identify trends in denials and compliance.</li>
